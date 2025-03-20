@@ -32,12 +32,12 @@
             usun = new Button();
             zapisz = new Button();
             dataGridView1 = new DataGridView();
-            dodaj = new Button();
             ID = new DataGridViewTextBoxColumn();
             Imie = new DataGridViewTextBoxColumn();
             Nazwisko = new DataGridViewTextBoxColumn();
             Wiek = new DataGridViewTextBoxColumn();
             Stanowisko = new DataGridViewTextBoxColumn();
+            dodaj = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             wczytaj.TabIndex = 0;
             wczytaj.Text = "wczytaj";
             wczytaj.UseVisualStyleBackColor = true;
+            wczytaj.Click += wczytaj_Click;
             // 
             // usun
             // 
@@ -58,6 +59,7 @@
             usun.TabIndex = 2;
             usun.Text = "usun";
             usun.UseVisualStyleBackColor = true;
+            usun.Click += usun_Click;
             // 
             // zapisz
             // 
@@ -67,6 +69,7 @@
             zapisz.TabIndex = 3;
             zapisz.Text = "zapisz";
             zapisz.UseVisualStyleBackColor = true;
+            zapisz.Click += zapisz_Click;
             // 
             // dataGridView1
             // 
@@ -77,16 +80,6 @@
             dataGridView1.Size = new Size(420, 150);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // dodaj
-            // 
-            dodaj.Location = new Point(613, 156);
-            dodaj.Name = "dodaj";
-            dodaj.Size = new Size(75, 23);
-            dodaj.TabIndex = 5;
-            dodaj.Text = "dodaj";
-            dodaj.UseVisualStyleBackColor = true;
-            dodaj.Click += dodaj_Click;
             // 
             // ID
             // 
@@ -114,6 +107,16 @@
             // 
             Stanowisko.HeaderText = "Stanowisko";
             Stanowisko.Name = "Stanowisko";
+            // 
+            // dodaj
+            // 
+            dodaj.Location = new Point(613, 156);
+            dodaj.Name = "dodaj";
+            dodaj.Size = new Size(75, 23);
+            dodaj.TabIndex = 5;
+            dodaj.Text = "dodaj";
+            dodaj.UseVisualStyleBackColor = true;
+            dodaj.Click += dodaj_Click;
             // 
             // Form2
             // 
