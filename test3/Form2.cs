@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,7 +94,7 @@ namespace test3
             if (!File.Exists(filePath))
             {
                 MessageBox.Show("Plik CSV nie istnieje.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
+                return;
             }
             // Odczytaj zawartość pliku CSV
             string[] lines = File.ReadAllLines(filePath);
@@ -101,18 +102,19 @@ namespace test3
             DataTable dataTable = new DataTable();
             // Dodanie kolumn na podstawie nagłówka
             string[] headers = lines[0].Split(',');
-            foreach (string header in headers)
-            {
-                dataTable.Columns.Add(header);
-            }
+
+
+
             // Dodawanie wierszy do tabeli danych
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] values = lines[i].Split(',');
-                dataTable.Rows.Add(values);
+                label1.Text = index.ToString()+values[1]+ values[2]+ values[3]+ values[4];
+                Add(values[1], values[2], values[3], values[4]);
+                //dataGridView1.Rows.Add(values);
             }
             // Przypisanie tabeli danych do DataGridView
-            dataGridView1.DataSource = dataTable;
+       
         }
         private void wczytaj_Click(object sender, EventArgs e)
         {
@@ -127,6 +129,11 @@ namespace test3
                 // Wywołanie funkcji wczytującej dane z pliku CSV
                 LoadCSVToDataGridView(openFileDialog1.FileName);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
