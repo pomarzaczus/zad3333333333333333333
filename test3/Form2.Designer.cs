@@ -39,6 +39,8 @@
             Stanowisko = new DataGridViewTextBoxColumn();
             dodaj = new Button();
             label1 = new Label();
+            XMLzapis = new Button();
+            XMLwczyt = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -129,11 +131,33 @@
             label1.Text = "label1";
             label1.Click += label1_Click;
             // 
+            // XMLzapis
+            // 
+            XMLzapis.Location = new Point(78, 331);
+            XMLzapis.Name = "XMLzapis";
+            XMLzapis.Size = new Size(75, 23);
+            XMLzapis.TabIndex = 7;
+            XMLzapis.Text = "XMLzapis";
+            XMLzapis.UseVisualStyleBackColor = true;
+            XMLzapis.Click += XMLzapis_Click;
+            // 
+            // XMLwczyt
+            // 
+            XMLwczyt.Location = new Point(78, 268);
+            XMLwczyt.Name = "XMLwczyt";
+            XMLwczyt.Size = new Size(75, 23);
+            XMLwczyt.TabIndex = 8;
+            XMLwczyt.Text = "XML wczyt";
+            XMLwczyt.UseVisualStyleBackColor = true;
+            XMLwczyt.Click += XMLwczyt_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(XMLwczyt);
+            Controls.Add(XMLzapis);
             Controls.Add(label1);
             Controls.Add(dodaj);
             Controls.Add(dataGridView1);
@@ -161,5 +185,7 @@
         private DataGridViewTextBoxColumn Wiek;
         private DataGridViewTextBoxColumn Stanowisko;
         private Label label1;
+        private Button XMLzapis;
+        private Button XMLwczyt;
     }
 }
