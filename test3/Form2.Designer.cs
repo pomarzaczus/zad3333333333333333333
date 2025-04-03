@@ -39,6 +39,8 @@
             Stanowisko = new DataGridViewTextBoxColumn();
             dodaj = new Button();
             label1 = new Label();
+            JSONzap = new Button();
+            JSONwczyt = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -129,11 +131,33 @@
             label1.Text = "label1";
             label1.Click += label1_Click;
             // 
+            // JSONzap
+            // 
+            JSONzap.Location = new Point(439, 384);
+            JSONzap.Name = "JSONzap";
+            JSONzap.Size = new Size(75, 23);
+            JSONzap.TabIndex = 7;
+            JSONzap.Text = "JSONzap";
+            JSONzap.UseVisualStyleBackColor = true;
+            JSONzap.Click += JSONzap_Click;
+            // 
+            // JSONwczyt
+            // 
+            JSONwczyt.Location = new Point(535, 384);
+            JSONwczyt.Name = "JSONwczyt";
+            JSONwczyt.Size = new Size(75, 23);
+            JSONwczyt.TabIndex = 8;
+            JSONwczyt.Text = "JSONwczyt";
+            JSONwczyt.UseVisualStyleBackColor = true;
+            JSONwczyt.Click += JSONwczyt_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(JSONwczyt);
+            Controls.Add(JSONzap);
             Controls.Add(label1);
             Controls.Add(dodaj);
             Controls.Add(dataGridView1);
@@ -142,6 +166,7 @@
             Controls.Add(wczytaj);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -161,5 +186,7 @@
         private DataGridViewTextBoxColumn Wiek;
         private DataGridViewTextBoxColumn Stanowisko;
         private Label label1;
+        private Button JSONzap;
+        private Button JSONwczyt;
     }
 }
