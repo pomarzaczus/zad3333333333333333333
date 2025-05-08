@@ -289,7 +289,7 @@ namespace test3
         private void XMLzapis_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Pliki XML (*)|*|Wszystkie pliki (*.*)|*.*";
+            saveFileDialog1.Filter = "Pliki XML (*.XML)|*.XML|Wszystkie pliki (*.*)|*.*";
             saveFileDialog1.Title = "Wybierz lokalizację zapisu pliku XML";
             saveFileDialog1.ShowDialog();
             // Jeśli użytkownik wybierze lokalizację i zatwierdzi, zapisz plik CSV
