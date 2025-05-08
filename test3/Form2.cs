@@ -193,7 +193,7 @@ namespace test3
         private void JSONzap_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Pliki JSON (*)|*|Wszystkie pliki (*.*)|*.*";
+            saveFileDialog1.Filter = "Pliki JSON (*.JSON)|*.JSON|Wszystkie pliki (*.*)|*.*";
             saveFileDialog1.Title = "Wybierz lokalizację zapisu pliku JSON";
             saveFileDialog1.ShowDialog();
             // Jeśli użytkownik wybierze lokalizację i zatwierdzi, zapisz plik CSV
@@ -240,7 +240,7 @@ namespace test3
         {
             // Wyświetlenie okna dialogowego wyboru pliku CSV
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Pliki JSON (*.JSON)|*.csv|Wszystkie pliki (*.*)|*.*";
+            openFileDialog1.Filter = "Pliki JSON (*.JSON)|*.JSON|Wszystkie pliki (*.*)|*.*";
             openFileDialog1.Title = "Wybierz plik JSON do wczytania";
             openFileDialog1.ShowDialog();
             // Jeśli użytkownik wybierze plik i zatwierdzi, wczytaj dane z pliku CSV
